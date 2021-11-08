@@ -9,5 +9,8 @@ int main(int, char**) {
     }
     std::cout << "Hello, world!\n";
 cleanup:
+    if(cjson_node != NULL) {
+        cJSON_Delete(cjson_node);
+    }
     std::cout << "error: " << std::endl;
 }
